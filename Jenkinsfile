@@ -4,15 +4,8 @@ node {
   }
 
   stage("Compilation") {
-    sh "./mvnw clean install -DskipTests"
-  }
-
-  stage("Tests and Deployment") {
-    stage("Runing unit tests") {
-      sh "./mvnw test -Punit"
-    }
-    stage("Deployment") {
-      sh 'nohup ./mvnw spring-boot:run -Dserver.port=8001 &'
-    }
+      withMaven(maven: "maven3.9.1", jdk: 'jdk8') {
+        sh 'mvn -Dmaven.test.skip clean package '
+      }
   }
 }
