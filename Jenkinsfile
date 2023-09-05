@@ -4,8 +4,15 @@ node {
   }
 
   stage("Compilation") {
-      withMaven(maven: "maven3.9.1", jdk: 'jdk8') {
-        sh 'mvn -Dmaven.test.skip clean package '
-      }
+    sh "mvn clean install"
+  }
+
+  stage("Tests and Deployment") {
+    stage("Runing unit tests") {
+      sh "mvn test -Punit"
+    }
+    stage("Deployment") {
+      sh 'nohup mvn spring-boot:run -Dserver.port=8001 &'
+    }
   }
 }
