@@ -3,8 +3,7 @@ node {
     git branch: 'master', url: 'https://github.com/bachirNdiaye1996/projetCICD.git'
   }
 
-  stage("Compilation") {
-    sh "mvn clean install"
-  }
-
+    stage("Compilation") {
+      sh "maven spring-boot:run"
+    }
 }
