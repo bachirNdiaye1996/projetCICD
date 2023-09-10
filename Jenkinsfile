@@ -7,7 +7,7 @@ node {
       sh "mvn clean install"
     }
 
-    stage("Compilation") {
+    stage("Running") {
       sh "mvn spring-boot:run"
     }
 }
