@@ -15,5 +15,5 @@ node {
 
 
 def deployJar(jarPath, destDir) {
-    sh "cp ${jarPath} ${destDir}"
+    sh "sudo cp ${jarPath} ${destDir}"
 }
