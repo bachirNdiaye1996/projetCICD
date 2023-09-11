@@ -14,7 +14,7 @@ public class ProjetCicdApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(SpringBootApplication.class);
+		return builder.sources(ProjetCicdApplication.class);
 	}
 
 }
