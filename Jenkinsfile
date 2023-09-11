@@ -9,7 +9,7 @@ node {
 
     stage("Deploy") {
         sh "echo Deploy UM"
-        deployJar("target/demo-0.0.1-SNAPSHOT.war", "/opt/tomcat/webapps")
+        deployJar("target/demo.war", "/opt/tomcat/webapps")
     }
 }
 
