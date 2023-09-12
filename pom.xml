@@ -16,6 +16,7 @@
 	<description>Demo de CICD</description>
 	<properties>
 		<java.version>11</java.version>
+		<start-class>com.example.demo.ProjetCicdApplication</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
