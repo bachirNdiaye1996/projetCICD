@@ -24,7 +24,7 @@ public class ProjetCicdApplication extends SpringBootServletInitializer {
 
 	@GetMapping(path = "/")
 	public String home() {
-		return "Demo de CICD Application";
+		return "Je test le deploiement rapide";
 	}
 
 }
